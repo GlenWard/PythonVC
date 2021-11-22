@@ -18,12 +18,13 @@ TODO
 - Allow changing of voice volume, done using pyttsx3.
 - Allow changing of female/male voice, done using pyttsx3.
 - Add a 'stop' command to interrupt current action.
-- Allow opening any website from voice command; find out if this can be done dynamically or static
+- Allow opening any website from voice command; find out if this can be done dynamically or static.
+- Look into listen_in_background command for SpeechRecognition.
 """
 
-voiceEngine = pyttsx3.init('sapi5')  # Play aroud with other speech APIs
+voiceEngine = pyttsx3.init('sapi5')  # Play around with other speech APIs
 voices = voiceEngine.getProperty('voices')  ########### Check this is needed?
-voiceEngine.setProperty('voice', 'voices[1].id')  # voices[0] male voices[1] female
+voiceEngine.setProperty('voice', 'voices[1].id')  # voices[0] male - voices[1] female
 
 
 # Function that allows the assistant to have a voice.
